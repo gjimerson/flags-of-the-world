@@ -1,0 +1,77 @@
+.details_main {
+    width: 100%;
+    margin-top: 250px;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Nunito Sans", sans-serif;
+    color: #fff;
+    font-size: 1em;
+    height: 90vh;
+    padding-top: 100px;
+}
+
+.back_button {
+    padding: 12px 25px;
+    background: #283744;
+    margin-bottom: 50px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    margin-left: 75px;
+}
+
+a {
+    color: #fff;
+}
+
+/* Main container */
+.container {
+    display: flex;
+    justify-content: space-between;
+    column-gap: 1rem;
+    padding-left:75px;
+    padding-right:75px;
+    height: 40vh;
+    flex-shrink: 0;
+  }
+
+  .description {
+      display: flex;
+      justify-content: space-between;
+  }
+  
+  .detail_flag,
+  .detail_info {
+    width: 50%;
+  }
+  .detail_flag img {
+      width: 100%;
+  }
+  .detail_info h3 {
+      align-items: center;
+      font-size: 2em;
+      font-weight: 600;
+  }
+  .detail_info h5 {
+    font-weight: 300;
+    padding: 5px 5px;
+  }
+
+  .borders {
+      display:flex;
+      flex-wrap: wrap;
+      gap: 15px;
+  }
+
+  .border_button {
+    padding: 5px 10px;
+    background: #283744;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+}

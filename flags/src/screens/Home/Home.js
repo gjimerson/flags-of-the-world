@@ -13,7 +13,7 @@ const AllCountries = () => {
     }, []);
     
     const filterName = async(countryName) => {
-        axios.get('https://restcountries.com/v3.1/name/'+countryName+'?fullText=true')
+        axios.get('https://restcountries.com/v3.1/name/'+countryName)
             .then(response => {
                 setCountries(response.data)
             })
@@ -44,7 +44,7 @@ const AllCountries = () => {
         )
     }
     return (
-        <div className="main_content">
+        <div className="home_main">
             <div className="top_bar">
                 <div className="search">
                     <SearchBar onSearch={filterName} />
@@ -55,12 +55,12 @@ const AllCountries = () => {
             </div>
             <div className="countries_grid">
                 {countries.map((country) => (
-                <Link to={`/${country.name.common}`}>
+                <Link to={`/${country.name.common}`} state={{country: country}}>
                 <div className="card">
-                    <div className="card_img">
+                    <div className="flag">
                         <img src={country.flags.png} alt="" />
                     </div>
-                    <div className="card_info">
+                    <div className="info">
                         <h4>{country.name.common}</h4>
                         <h6><b>Population:</b> {new Intl.NumberFormat().format(country.population)}</h6>
                         <h6><b>Region:</b> {country.region}</h6>
