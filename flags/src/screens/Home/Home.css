@@ -1,0 +1,184 @@
+/* Font Nunito Sans */
+    * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        font-family: "Nunito Sans", sans-serif;
+    }
+/* Navbar styling */
+    .navbar-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 60px;
+        background-color: #283744;
+        color: #fff;
+        padding-left: 75px;
+        z-index: 9999;
+    }
+  
+    .navbar-title {
+        font-size: 24px;
+        font-weight: 800;
+        padding: 0 20px;
+    }
+  
+/* Search and filter box styling */
+    .top_bar {
+        display: flex;
+        width: 100%;
+        height: 45px;
+        line-height: 70px;
+        position: fixed;
+        padding-left: 75px;
+        padding-right: 75px;
+        left: 0;
+        position: relative;
+    }
+
+    .search {
+        align-self: flex-start;
+        width: 500px;
+    }
+
+
+    .filter {
+        margin-left: auto;
+    }
+
+    input {
+        padding: 17px 25px;
+        color: #fff;
+        border-radius: 5px;
+        background: #283744;
+        border: none;
+        outline: none;
+        margin-bottom: 50px;
+        cursor: pointer;
+        width: 100%;
+    }
+    
+    input::placeholder {
+        color: #fff;
+    }
+
+    select {
+        padding: 12px 25px;
+        background: #283744;
+        margin-bottom: 50px;
+        border: none;
+        outline: none;
+        border-radius: 5px;
+        color: #fff;
+        cursor: pointer;
+        height: 100%;
+        align-content: center;
+    }
+
+
+    @media only screen and (max-width: 375px) {
+        .top_bar {
+            display: flex;
+            width: 100%;
+            height: 45px;
+            line-height: 70px;
+            position: fixed;
+            left: 0;
+            position: relative;
+            flex-direction: column;
+        }
+        .search {
+            align-self: flex-start;
+            width: 300px;
+        }
+        input {
+            padding: 17px 25px;
+            color: #fff;
+            border-radius: 5px;
+            background: #283744;
+            border: none;
+            outline: none;
+            margin-bottom: 50px;
+            cursor: pointer;
+            width: 175px;
+        }
+        select {
+            display: none;
+        }
+    }
+
+/* Country Main Card */
+      
+    .card {
+        width: 250px;
+        border-radius: 5px;
+        background: #283744;
+        color: #fff;
+    }
+
+    .card_img img {
+        width: 100%;
+        height: 150px;
+        border-radius: 5px 5px 0px 0px;
+    }
+
+    .card_info {
+        padding: 25px;
+    }
+
+    .card_info h4 {
+        padding-bottom: 15px;
+        font-weight: 600;
+    }
+    
+    .card_info h6 {
+        font-weight: 300;
+    }
+
+/* Country Grid */
+    .countries_grid {
+        width: 100%;
+        padding-top: 175px;
+        display: flex;
+        flex-wrap: wrap;
+        padding-right: 50px;
+        padding-left: 50px;
+        padding: 75px;
+        gap: 50px;
+        align-items: space-around;
+        justify-content: space-between;
+        position: relative;
+    }
+/* main */
+  .main {
+    width: 100%;
+    padding: 0px 15px;
+    margin: auto !important;
+    
+  }
+
+  .main_content {
+      width: 100%;
+      padding-top: 100px;
+  }
+  
+  body {
+    background: #1c2d37;
+  }
+
+  a {
+    text-decoration:none;
+  }
+
+  .error-message {
+    color: #d8000c;
+    background-color: #ffd2d2;
+    border: 1px solid #d8000c;
+    padding-top: 150px;
+    border-radius: 5px;
+  }
