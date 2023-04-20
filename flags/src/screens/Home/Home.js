@@ -3,7 +3,7 @@ import SearchBar from "../../components/SearchBar";
 import FilterDropdown from "../../components/FilterDropdown";
 import axios from 'axios';
 import './Home.css';
-import { Link } from "react-router-dom";
+import CountryCard from "../../components/CountryCard";
 
 const AllCountries = () => {
     const [countries, setCountries] = useState([]);
@@ -55,19 +55,7 @@ const AllCountries = () => {
             </div>
             <div className="countries_grid">
                 {countries.map((country) => (
-                <Link to={`/${country.name.common}`} state={{country: country}}>
-                <div className="card">
-                    <div className="flag">
-                        <img src={country.flags.png} alt="" />
-                    </div>
-                    <div className="info">
-                        <h4>{country.name.common}</h4>
-                        <h6><b>Population:</b> {new Intl.NumberFormat().format(country.population)}</h6>
-                        <h6><b>Region:</b> {country.region}</h6>
-                        <h6><b>Capital:</b> {country.capital}</h6>
-                    </div>
-                </div>
-                </Link>
+                    <CountryCard key={country.name.common} country={country} />
                 ))}
             </div>
         </div>

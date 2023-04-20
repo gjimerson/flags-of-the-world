@@ -1,11 +1,9 @@
-version: "3"
-
+version: '3.8'
 services:
-  app:
-    build:
-      context: .
-      dockerfile: Dockerfile
+  web:
+    build: .
+    command: npm start
     volumes:
-      - ./src:/app/src
+      - .:/flags
     ports:
       - "3000:3000"
